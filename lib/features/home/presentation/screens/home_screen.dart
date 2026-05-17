@@ -81,23 +81,19 @@ class HomeScreen extends ConsumerWidget {
                         children: [
                           Text(
                             '${_greeting()},',
-                            style: const TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w400,
-                              color: AppColors.textSecondary,
-                              height: 1.2,
-                            ),
+                            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                                  color: AppColors.textSecondary,
+                                  height: 1.2,
+                                ),
                           ),
                           const SizedBox(height: 4),
                           Text(
                             displayName,
-                            style: const TextStyle(
-                              fontSize: 28,
-                              fontWeight: FontWeight.bold,
-                              letterSpacing: -0.6,
-                              color: AppColors.textPrimary,
-                              height: 1.15,
-                            ),
+                            style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                                  letterSpacing: -0.6,
+                                  color: AppColors.textPrimary,
+                                  height: 1.15,
+                                ),
                           ),
                         ],
                       ),
@@ -107,11 +103,10 @@ class HomeScreen extends ConsumerWidget {
                       backgroundColor: AppColors.primary,
                       child: Text(
                         initials,
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15,
-                        ),
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
                       ),
                     ),
                   ],
@@ -119,14 +114,13 @@ class HomeScreen extends ConsumerWidget {
                 const SizedBox(height: 20),
                 const Divider(height: 1, thickness: 1, color: AppColors.border),
                 const SizedBox(height: 20),
-                const Text(
+                Text(
                   'Mini Apps',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: -0.4,
-                    color: AppColors.textPrimary,
-                  ),
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: -0.4,
+                        color: AppColors.textPrimary,
+                      ),
                 ),
                 const SizedBox(height: 16),
                 GridView.count(

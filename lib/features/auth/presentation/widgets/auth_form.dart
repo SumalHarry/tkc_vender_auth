@@ -48,7 +48,7 @@ class AuthForm extends HookConsumerWidget {
         ),
         if (usernameError != null) ...[
           const SizedBox(height: 4),
-          Text(usernameError, style: const TextStyle(color: AppColors.primary)),
+          Text(usernameError, style: Theme.of(context).textTheme.bodySmall?.copyWith(color: AppColors.primary)),
         ],
         const SizedBox(height: 16),
         TextField(
@@ -69,7 +69,7 @@ class AuthForm extends HookConsumerWidget {
         ),
         if (passwordError != null) ...[
           const SizedBox(height: 4),
-          Text(passwordError, style: const TextStyle(color: AppColors.primary)),
+          Text(passwordError, style: Theme.of(context).textTheme.bodySmall?.copyWith(color: AppColors.primary)),
         ],
         const SizedBox(height: 28),
         ElevatedButton(

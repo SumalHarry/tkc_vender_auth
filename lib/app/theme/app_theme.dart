@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tkc_vender_auth/app/theme/app_colors.dart';
+import 'package:tkc_vender_auth/app/theme/app_text_theme.dart';
 
 abstract final class AppTheme {
   static const _radiusCard = 16.0;
@@ -17,16 +18,15 @@ abstract final class AppTheme {
       useMaterial3: true,
       colorScheme: colorScheme,
       scaffoldBackgroundColor: AppColors.background,
-      appBarTheme: const AppBarTheme(
+      textTheme: AppTextTheme.textTheme,
+      appBarTheme: AppBarTheme(
         backgroundColor: AppColors.background,
         foregroundColor: AppColors.textPrimary,
         elevation: 0,
         scrolledUnderElevation: 0,
         centerTitle: false,
-        titleTextStyle: TextStyle(
+        titleTextStyle: AppTextTheme.textTheme.headlineMedium?.copyWith(
           color: AppColors.textPrimary,
-          fontSize: 28,
-          fontWeight: FontWeight.bold,
         ),
       ),
       cardTheme: CardThemeData(
@@ -45,16 +45,13 @@ abstract final class AppTheme {
           horizontal: 16,
           vertical: 14,
         ),
-        labelStyle: const TextStyle(
-          fontSize: 11,
-          fontWeight: FontWeight.w600,
+        labelStyle: AppTextTheme.textTheme.labelSmall?.copyWith(
           letterSpacing: 1.0,
           color: AppColors.textSecondary,
         ),
         floatingLabelBehavior: FloatingLabelBehavior.always,
-        hintStyle: const TextStyle(
+        hintStyle: AppTextTheme.textTheme.bodyLarge?.copyWith(
           color: AppColors.textSecondary,
-          fontSize: 16,
         ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(_radiusField),
@@ -80,7 +77,9 @@ abstract final class AppTheme {
           elevation: 0,
           shadowColor: Colors.transparent,
           minimumSize: const Size.fromHeight(52),
-          textStyle: const TextStyle(fontSize: 17, fontWeight: FontWeight.w600),
+          textStyle: AppTextTheme.textTheme.titleMedium?.copyWith(
+            fontWeight: FontWeight.w600,
+          ),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(_radiusField),
           ),
@@ -95,18 +94,16 @@ abstract final class AppTheme {
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
           foregroundColor: AppColors.primary,
-          textStyle: const TextStyle(fontWeight: FontWeight.w600),
+          textStyle: AppTextTheme.textTheme.labelLarge,
         ),
       ),
-      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
         selectedItemColor: AppColors.primary,
         unselectedItemColor: AppColors.textSecondary,
-        selectedLabelStyle: TextStyle(
-          fontSize: 10,
+        selectedLabelStyle: AppTextTheme.textTheme.labelSmall?.copyWith(
           fontWeight: FontWeight.w600,
         ),
-        unselectedLabelStyle: TextStyle(
-          fontSize: 10,
+        unselectedLabelStyle: AppTextTheme.textTheme.labelSmall?.copyWith(
           fontWeight: FontWeight.w400,
         ),
         type: BottomNavigationBarType.fixed,
