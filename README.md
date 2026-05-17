@@ -109,6 +109,11 @@ The host overrides each mini app's Dio provider with the authenticated `coreDioP
 `freezed`, `json_serializable`, and `riverpod_generator` produce `.freezed.dart` and `.g.dart` files. Run `make gen` after modifying any annotated class. Never edit generated files directly.
 
 ### Screenshot
-<img width="1260" height="2736" alt="Simulator Screenshot - iPhone Air - 2026-05-17 at 14 27 01" src="https://github.com/user-attachments/assets/d2c0a61a-5e60-4a17-8355-f68cef15e492" />
-<img width="1260" height="2736" alt="Simulator Screenshot - iPhone Air - 2026-05-17 at 14 27 04" src="https://github.com/user-attachments/assets/307a724c-acee-46fa-9b4d-52856f45ecaf" />
+
+<img width="300"  alt="Simulator Screenshot - iPhone Air - 2026-05-17 at 14 27 04" src="https://github.com/user-attachments/assets/307a724c-acee-46fa-9b4d-52856f45ecaf" />
+
+<img width="300" alt="Simulator Screenshot - iPhone Air - 2026-05-17 at 14 27 01" src="https://github.com/user-attachments/assets/d2c0a61a-5e60-4a17-8355-f68cef15e492" />
+
+
+
 
