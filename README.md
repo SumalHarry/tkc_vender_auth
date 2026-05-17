@@ -89,6 +89,14 @@ Mini apps are standalone Flutter packages loaded as path dependencies. Each is a
 
 The host overrides each mini app's Dio provider with the authenticated `coreDioProvider` at startup (`main.dart`), so mini apps share auth headers and token refresh automatically.
 
+**Adding a new mini app (local only — do not push):**
+
+1. Add the package as a path dependency in `pubspec.yaml`
+2. Create a `MiniAppEntry` adapter in `lib/app/mini_apps/configs/`
+3. Register it in `miniAppRegistry` (`lib/app/mini_apps/mini_app_registry.dart`)
+4. Run `fvm flutter pub get` and `make gen`
+5. Test with `fvm flutter run`
+
 ### Auth flow
 
 1. On startup `AuthNotifier` checks stored tokens and restores the session.
